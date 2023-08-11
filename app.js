@@ -1,3 +1,21 @@
+//5일
+const h1 = document.querySelector(".hello:first-child h1"); //title element 찾는 법
+
+function handleTitleClick() {
+    const currentColor = h1.style.color;
+    let newColor;
+    if(currentColor === "blue") { // === 는 값이 일치하는지 확인
+        newColor = "tomato";
+    } else {
+        newColor = "blue";
+    }
+    h1.style.color = newColor;
+}
+
+h1.addEventListener("click", handleTitleClick);
+
+/* 
+// 4일
 const h1 = document.querySelector(".hello:first-child h1"); //title element 찾는 법
 
 function handleTitleClick() {
@@ -37,7 +55,8 @@ window.addEventListener("copy", handleWindowCopy);
 window.addEventListener("offline", handleWindowOffline);
 window.addEventListener("online", handleWindowOnline);
 
-/*
+
+// 1~3일
 function sayHello(nameOfPerson, age) { //sayHello로 보내진 첫번ㅉ ㅐ 데이터가 nameOfPerson의 변수로 간다.
     console.log("Hello my name is " + nameOfPerson + " and I'm " + age);
 }
