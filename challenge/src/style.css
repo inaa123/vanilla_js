@@ -1,0 +1,15 @@
+h2 {
+    color: white;
+}
+
+.bigScreen {
+    background-color: darkorange;
+}
+
+.mediumScreen {
+    background-color: blueviolet;
+}
+
+.smallScreen {
+    background-color: cornflowerblue;
+}

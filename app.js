@@ -1,13 +1,19 @@
 //5일
 const h1 = document.querySelector(".hello:first-child h1"); //title element 찾는 법
+/*
+function handleTitleClick() {
+    const clickedClass = "clikced"; //string을 변수에 저장해서 사용하면 유용함. 
+    if (h1.classList.contains(clickedClass)) { // clickedClass가 h1의 classList에 포함되어 있다면 clickedClass를 지운다(remove);
+        h1.classList.remove(clickedClass);
+    } else { //clickedClass가 h1의 classList에 포함되어 있지 않다면 clickedClass를 추가한다.(add)
+        h1.classList.add(clickedClass);
+    }
+}
+*/
 
 function handleTitleClick() {
-    const clickedClass = "clikced";
-    if (h1.className === clickedClass) {
-        h1.className = "";
-    } else {
-        h1.className = clickedClass;
-    }
+    //const clickedClass = "clicked";
+    h1.classList.toggle("clicked"); //toggle을 사용할 경우 "clicked"를 한번만 쓰기 때문에 const clickedClass = "clicked"하지 않고 바로 clicked 쓰면 도ㅚㅁ
 }
 
 h1.addEventListener("click", handleTitleClick);
