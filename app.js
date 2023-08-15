@@ -1,14 +1,19 @@
 
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden"; // "hidden"반복 사용중. string만 포함된 변수는 대문자로 표기함(관습?)
 
 function onLoginSubmit(event) {
     event.preventDefault();
-    console.log(event);
+    const username = loginInput.value;
+    localStorage.setItem("username", username);
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
 }
-
 loginForm.addEventListener("submit", onLoginSubmit);
-
 /* 
 //5일
 const h1 = document.querySelector(".hello:first-child h1"); //title element 찾는 법
