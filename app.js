@@ -1,6 +1,17 @@
+//const loginForm = document.getElementById("login-form"); 
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
+
+function onLoginBtnClick() {
+    const username = loginInput.value;
+    console.log(username);
+}
+
+loginButton.addEventListener("click", onLoginBtnClick);
+/* 
 //5일
 const h1 = document.querySelector(".hello:first-child h1"); //title element 찾는 법
-/*
+
 function handleTitleClick() {
     const clickedClass = "clikced"; //string을 변수에 저장해서 사용하면 유용함. 
     if (h1.classList.contains(clickedClass)) { // clickedClass가 h1의 classList에 포함되어 있다면 clickedClass를 지운다(remove);
@@ -9,7 +20,6 @@ function handleTitleClick() {
         h1.classList.add(clickedClass);
     }
 }
-*/
 
 function handleTitleClick() {
     //const clickedClass = "clicked";
@@ -18,7 +28,7 @@ function handleTitleClick() {
 
 h1.addEventListener("click", handleTitleClick);
 
-/* 
+
 // 4일
 const h1 = document.querySelector(".hello:first-child h1"); //title element 찾는 법
 
